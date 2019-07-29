@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Game-Info</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Ziyi Huang">
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="desktop">
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">explore</a></li>
+            <li><a href="#">categories</a></li>
+            <li>
+              <label for="search-bar">
+                <input id="search-bar" type="text" placeholder="search for a game..."/>
+              </label>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 38.875 41"
+                id="search-icon">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill-rule: evenodd;
+                    }
+                  </style>
+                </defs>
+                <path id="Search" class="cls-1" d="M119.41,1195.41l-9.262-9.29a17.19,17.19,0,1,
+                  0-2.31,1.95l9.446,9.48A1.508,1.508,0,1,0,119.41,1195.41Zm-35.4-21.31a14.035,14.035
+                  ,0,1,1,14.035,14.08A14.055,14.055,0,0,1,84.01,1174.1Z"
+                  transform="translate(-81 -1157)"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <div class="mobile">
+          <label for="mobile-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+              id="menu-icon">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path id="Menu" class="cls-1" d="M123.416,1262.82A21.929,21.929,0,0,0,101.523,
+                1243c-0.731,0-1.472.04-2.2,0.11a22,22,0,0,0,2.157,43.89c0.731,0,1.472-.04,
+                2.2-0.11A22,22,0,0,0,123.416,1262.82Zm-20.033,21.09q-0.96.09-1.906,0.09a19,19,0,0,
+                1-1.86-37.91q0.96-.09,1.906-0.09A19,19,0,0,1,103.383,1283.91Zm7.628-19.91H91.989a1.5,
+                1.5,0,1,0,0,3h19.022A1.5,1.5,0,1,0,111.011,1264Zm0-6H91.989a1.5,1.5,0,1,0,0,
+                3h19.022A1.5,1.5,0,1,0,111.011,1258Zm0,12H91.989a1.5,1.5,0,1,0,0,3h19.022A1.5,1.5,0,
+                1,0,111.011,1270Z" transform="translate(-79.5 -1243)"/>
+            </svg>
+          </label>
+          <input type="checkbox" id="mobile-menu">
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">explore</a></li>
+            <li><a href="#">categories</a></li>
+            <li>
+              <label for="search-bar">
+                <input id="search-bar" type="text" placeholder="search for a game..."/>
+              </label>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 38.875 41"
+                id="search-icon">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill-rule: evenodd;
+                    }
+                  </style>
+                </defs>
+                <path id="Search" class="cls-1" d="M119.41,1195.41l-9.262-9.29a17.19,17.19,0,1,
+                  0-2.31,1.95l9.446,9.48A1.508,1.508,0,1,0,119.41,1195.41Zm-35.4-21.31a14.035,14.035
+                  ,0,1,1,14.035,14.08A14.055,14.055,0,0,1,84.01,1174.1Z"
+                  transform="translate(-81 -1157)"/>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="preview-img"></div>
+    <div class="left-text">
+      <div class="game-title">
+        <h1 id="game-name">Final Fantasy XV</h1>
+        <div id="rating">Rating: <span id="rating-num">9.5</span></div>
+      </div>
+      <div class="left-separator"></div>
+      <div class="tags">
+        <ul>
+          <li>RPG</li>
+          <li>Adventure</li>
+          <li>Single-Player</li>
+        </ul>
+      </div>
+      <p class="storyline">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus libero elit, quis pretium est varius ac.
+        Mauris vitae arcu leo. Cras vehicula arcu risus, et convallis
+        urna luctus id. Nunc a rutrum odio. Aenean vel leo in
+        augue lobortis mollis. Nullam faucibus enim lacinia
+        malesuada pharetra.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nam finibus libero elit, quis pretium est varius ac.
+        Mauris vitae arcu leo. Cras vehicula arcu risus, et convallis
+        urna luctus id. Nunc a rutrum odio. Aenean vel leo in
+        augue lobortis mollis. Nullam faucibus enim lacinia
+        malesuada pharetra.
+      </p>
+    </div>
+    <button id="left-button">Buy</button>
+    <div class="card-container">
+      <div class="games-display" id="most-popular">
+        <h2>Most Popular</h2>
+        <ul>
+          <li><img class="card" src="imgs/red.jpg" alt="game card"></li>
+          <li><img class="card" src="imgs/helmet.jpg" alt="game card"></li>
+          <li><img class="card" src="imgs/final.jpeg" alt="game card"></li>
+          <li><img class="card" src="imgs/dead.jpg" alt="game card"></li>
+          <li><img class="card" src="imgs/asphalt.jpg" alt="game card"></li>
+        </ul>
+      </div>
+      <div class="games-display" id="highest-rated">
+        <h2>Highest Rated</h2>
+        <ul>
+          <li><img class="card" src="imgs/red.jpg" alt="game card"></li>
+          <li><img class="card" src="imgs/helmet.jpg" alt="game card"></li>
+          <li><img class="card" src="imgs/final.jpeg" alt="game card"></li>
+          <li><img class="card" src="imgs/dead.jpg" alt="game card"></li>
+          <li><img class="card" src="imgs/asphalt.jpg" alt="game card"></li>
+        </ul>
+      </div>
+      <!-- <div class="games-display" id="upcoming">
+        <h2>Upcoming</h2>
+        <ul>
+          <li><img class="card" src="imgs/red.jpg" alt="game card"></li>
+          <li><img class="card" src="imgs/helmet.jpg" alt="game card"></li>
+          <li><img class="card" src="imgs/final.jpeg" alt="game card"></li>
+          <li><img class="card" src="imgs/dead.jpg" alt="game card"></li>
+          <li><img class="card" src="imgs/asphalt.jpg" alt="game card"></li>
+        </ul>
+      </div> -->
+    </div>
+  </body>
+</html>

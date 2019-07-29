@@ -1,0 +1,364 @@
+:root {
+  --primary-color: #FF5722;
+  --secondary-color: #B59EFA;
+  --subcolor: #BDBDBD;
+  --light-mode-color: #F7F7F7;
+  --preview-filter: radial-gradient(rgba(109, 109, 109, 0.7), #000000);
+  --mobile-preview-filter: rgba(0, 0, 0, 0.4);
+  --card-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  --active-card-shadow: 0px 10px 22px rgba(0, 0, 0, 0.5);
+  --left-separator-color: rgba(189, 189, 189, 0.53);
+  --buy-button-shadow: 0px 10px 10px 0px rgba(101,47,31,1);
+  --overlay-color: rgba(30, 30, 30, 0.9);
+}
+
+* {
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: var(--light-mode-color);
+  color: black;
+  overflow-x: hidden;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--subcolor);
+}
+
+a:active {
+  color: white;
+}
+
+/* ========================= style the nav bar =========================*/
+/* -- style the desktop nav bar --- */
+.desktop {
+  position: absolute;
+  right: 0;
+}
+
+.desktop ul {
+  list-style: none;
+  float: right;
+}
+
+.desktop li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#search-bar {
+  border-radius: 42px;
+  padding: 10px 10px 10px 10px;
+  color: var(--subcolor);
+}
+
+#search-bar::placeholder {
+  color: var(--subcolor);
+  font-size: 1em;
+}
+
+#search-icon{
+  fill: var(--subcolor);
+  vertical-align: middle;
+  position: relative;
+  transform: translateX(-40px);
+  cursor: pointer;
+}
+
+/* -- style the initial mobile nav bar --- */
+#mobile-menu {
+  display: none;
+}
+
+#mobile-menu:checked ~ ul {
+  opacity: 1;
+}
+
+#menu-icon {
+  display: none;
+  cursor: pointer;
+  fill: var(--light-mode-color);
+  position: absolute;
+  right: 0;
+}
+
+.mobile ul {
+  display: none;
+  opacity: 0;
+}
+
+/* ========================= style the left side =========================*/
+/* --- style the image --- */
+#preview-img {
+  width: 39.5vw; height: 100vh;
+  color: white;
+  background: url("../imgs/red.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#preview-img::before {
+  content: "";
+  display: block;
+  width: 39.5vw; height: 100vh;
+  background: var(--preview-filter);
+  opacity: 0.65;
+}
+
+/* --- style the text --- */
+.left-text {
+  position: absolute;
+  color: var(--subcolor);
+  width: 32.70vw;
+  height: 24.3vh;
+  left: 3.33vw;
+  top: 68.3vh;
+  overflow: hidden;
+}
+
+/* styl the first line */
+.game-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+h1 {
+  font-size: 1.75em;
+  color: white;
+  max-width: 19.58vw;
+  overflow: hidden;
+}
+
+#rating {
+  color: var(--subcolor);
+  font-size: 1.2em;
+}
+
+#rating-num {
+  color: var(--primary-color);
+  font-size: 1.75em;
+}
+
+/* style the second line - the separator */
+.left-separator {
+  background-color: var(--left-separator-color);
+  height: 1px;
+  width: 32.70vw;
+}
+
+/* style the third line - the tags */
+.tags ul {
+  list-style: none;
+  padding: 5px 0px 5px 0px;
+}
+
+.tags ul li {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.9em;
+}
+
+/* style the fourth line - the story */
+.storyline {
+  overflow: hidden;
+  max-width: 21.25vw;
+  font-size: 0.75em;
+}
+
+/* --- style the button --- */
+button {
+  position: absolute;
+  background-color: var(--primary-color);
+  color: white;
+  width: 7vw;
+  height: 7.78vh;
+  border-radius: 60px;
+  -webkit-box-shadow: var(--buy-button-shadow);
+  -moz-box-shadow: var(--buy-button-shadow);
+  box-shadow: var(--buy-button-shadow);
+  left: 29vw;
+  top: 85.07vh;
+  overflow: hidden;
+  font-size: 1.5em;
+}
+
+button:hover {
+  cursor: pointer;
+  animation-duration: 0.6s;
+  animation-name: bounce;
+}
+
+@keyframes bounce {
+  50% {
+    transform: scale(0.5);
+  }
+}
+
+/* ========================= style the right side =========================*/
+.card-container {
+  position: absolute;
+  top: 7.50vh;
+  left: 44.27vw;
+}
+
+.card {
+  min-width: 100%; max-width: 100%;
+  min-height: 100%; max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.games-display {
+  width: 63.23vw;
+  height: 35.88vh;
+  margin-bottom: 5.00vh;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 2.5vh;
+}
+
+/* --- style the cards --- */
+.games-display ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.games-display ul li {
+  width: 10.16vw;
+  height: 28.00vh;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: var(--card-shadow);
+  -moz-box-shadow: var(--card-shadow);
+  box-shadow: var(--card-shadow);
+  transition: all 0.5s;
+}
+
+.games-display ul li:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  -webkit-box-shadow: var(--active-card-shadow);
+  -moz-box-shadow: var(--active-card-shadow);
+  box-shadow: var(--active-card-shadow);
+}
+
+.games-display ul li img {
+  border-radius: 10px;
+}
+
+/* ========================= media queries =========================*/
+@media only screen and (max-width: 900px) {
+  /* reveal the mobile menu icon and hide the text nav bar */
+  .desktop {
+    display: none;
+  }
+
+  #menu-icon {
+    display: block;
+    transform: scale(0.7);
+    z-index: 2;
+    transition: all 0.5s;
+    transform-origin: top right;
+  }
+
+  .mobile ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    list-style: none;
+    position: absolute;
+    z-index: 1;
+    background: var(--overlay-color);
+    transition: all 0.6s ease-out;
+  }
+
+  #preview-img {
+    width: 100vw;
+    height: 65vh;
+  }
+
+  #preview-img:before {
+    width: 100vw;
+    height: 65vh;
+    background-color: var(--mobile-preview-color);
+  }
+
+  /* style the text */
+  .left-text {
+    top: 40vh;
+    width: 87.5vw;
+  }
+
+  .game-title {
+    height: 8.05vh;
+  }
+
+  h1 {
+    max-width: 87.5vw;
+  }
+
+  .left-separator {
+    width: 87.5vw;
+  }
+
+  .storyline {
+    max-width: 63vw;
+    max-height: 9.22vh;
+    overflow: hidden;
+  }
+
+  button {
+    width: 14vw;
+    height: 6.1vh;
+    top: 55vh;
+    left: 76.17vw;
+    vertical-align: baseline;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  button:hover {
+    animation: none;
+  }
+
+  button:active {
+    animation-duration: 0.6s;
+    animation-name: bounce;
+  }
+
+  /* style the cards */
+  .card-container {
+    top: 68vh;
+    left: 2.2vw;
+  }
+
+  .games-display {
+    width: 118.64vw;
+    height: 26.32vh;
+    margin-bottom: 6vh;
+  }
+
+  .games-display ul li {
+    width: 19.04vw;
+    height: 22.14vh;
+  }
+}
